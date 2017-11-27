@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <style type="text/css">
+ p{font-size:17px;}
+ #a{position:relative;top:50%;left:50%;}
+ #box{height: 619px;border:2px solid #00ffff;margin-left:-7px;margin-right:-7px;}
+ #left{width:30px;height:100px;position:relative;top:-312px}
+ #right{width:30px;height:100px;position:relative;top:-312px}
+ </style>
+ <body>
+ <EMBED src="music/pianai.mp3"; width=10px; height=10px; type="audio/mpeg" loop="1" autostart="1" volume="0"></EMBED> 
+ <div id="a">
+ <button id="left"> < </button>
+ <img src="img/1.jpg" alt="dfd" id="box"/>
+  <button id="right"> > </button>
+ </div>
+  <div id="a">
+  <font size="6" color="#ff3300">猪，点击图片试试</font>
+  <p>我那么努力都是为了将来能给你想要的生活</p>
+  <p>正大光明、风风光光地娶你</p>
+   <p>我现在想你，但我更想将来我的世界里都是你</p>
+   <p>我不会变心</p>
+   <p>我会乖乖地不让你担心</p>
+   <p>我希望我们地爱情充满着甜蜜</p>
+   <p>我爱你，我的宝宝</p>
+  </div>
+  <script type="text/javascript">
+   document.getElementById("box").onclick=function() {
+     alert("真是头猪，让你点你就点。不过我真的好想你啊，臭猪。");
+   };
+          var oLeft=document.getElementById("left");
+		  var oRight=document.getElementById("right");
+		  var oImg=document.getElementById("box");
+		  var index=1;
+		  oRight.onclick=function(){
+			 index++;
+			 if(index>=10)index=1;
+		     oImg.src="img/"+index+".jpg";
+		  }
+		  oLeft.onclick=function(){
+			 index--;
+              if(index<=0)index=10;
+		     oImg.src="img/"+index+".jpg";
+		  }
+  </script>
+ </body>
+</html>
